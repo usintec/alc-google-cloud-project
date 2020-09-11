@@ -1,0 +1,28 @@
+Google Cloud Fundamentals: Getting Started with App Engine
+
+	FOLLOW THE STEPS LISTED BELOW IN CLOUD SHELL:
+
+1. gcloud config list project
+	the command above list the project ID 
+2. project = <project_ID>
+	the commmand above set project id in the project variable
+3. gcloud app create --project=$DEVSHELL_PROJECT_ID
+	When prompted, select the region where you want your App Engine application located.
+4. git clone https://github.com/GoogleCloudPlatform/python-docs-samples
+	the command above clone the source code repository for a sample application in the
+	the hello_world directory
+5. cd python-docs-samples/appengine/standard_python3/hello_world
+	the command above switch to hello_world directory
+6. sudo apt-get update
+	Execute the following command to update the package list
+7. sudo apt-get install virtualenv
+	install virtualenv
+8. virtualenv -p python3 venv
+	Activate the virtual environment.
+9. source venv/bin/activate
+	Navigate to your project directory and install dependencies.
+10. pip install  -r requirements.txt
+	Run the application:
+11. python main.py
+
+	In Cloud Shell, click Web preview. Preview on port 8080 to preview the application.

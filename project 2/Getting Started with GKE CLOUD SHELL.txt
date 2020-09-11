@@ -1,0 +1,29 @@
+Google Cloud Fundamentals: Getting Started with GKE
+
+FOLLOW THE STEPS LISTED BELOW IN CLOUD SHELL:
+
+1. export MY_ZONE=us-central1-a 
+	the command above store us-central-1 in MY_ZONE variable for subsequent usage
+2. gcloud container clusters create webAppFrontEnd --zone $MY_ZONE --num-nodes 2
+	the command above start or create a kubernetes cluster manages by kubernetes
+	engine. The cluster is named as webAppFrontEnd 
+3. kubectl version
+	the command above check the installed version of kubernetes
+4. kubectl create deploy nginx --image=nginx:1.17.10
+	the command above makes kubernetes to create a deployment consisting of
+	a single pod containining nginx container
+5. kubectl get pods
+	the command above view the pods running the nginx container
+6. kubectl expose deployment nginx --port 80 --type LoadBalancer
+	the command above create a service and an external load balancer with
+	a public IP address attached to it
+7. kubectl get services
+	the command above display the new services
+8. kubectl scale deployment nginx --replicas 3
+	scalling up deployment. Increase available resources for an application that is 
+	becoming more popular
+9. kubectl get pods
+	confirm that your external IP address has not changed
+10. kubectl get services
+	
+	Now switch  to the web browser and enter the external IP address to see the Nginx page
